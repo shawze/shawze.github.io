@@ -4,7 +4,7 @@ date:   2020-10-04
 title:  python抓取微博、头条热榜并上传到github\ftp\cos\oss
 ---
 
-```
+```python
 # -*- coding: utf-8 -*-
 #! /usr/bin/env python3
 
