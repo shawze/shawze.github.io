@@ -11,7 +11,7 @@ jobs:
     - name: upload
       uses: haloislet/cos-action@v2
       with:
-        COMMAND: coscmd upload -r './_posts' /
+        COMMAND: coscmd upload -r / /
         SECRET_ID: ${{ secrets.SECRETID }}
         SECRET_KEY: ${{ secrets.SECRETKEY }}
         BUCKET: ${{ secrets.COS_BUCKET }}
