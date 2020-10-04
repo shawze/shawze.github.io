@@ -16,6 +16,6 @@ jobs:
             secret_key: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
             cos_bucket: ${{ secrets.COS_BUCKET }}
             cos_region: ${{ secrets.COS_REGION }}
-            local_path: fonts
+            local_path: ../fonts
             remote_path: docroot/static
             clean: true
