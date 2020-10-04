@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+
+      - name: Build project
+        run: yarn && yarn build
+
+      - name: Upload COS
+        uses: zkqiang/tencent-cos-action@v0.1.0
+        with:
+          args: delete -r -f / && upload -r ./dist/ /
+          secret_id: ${{ secrets.SECRETID }}
+          secret_key: ${{ secrets.SECRETKEY }}
+          bucket: ${{ secrets.COS_BUCKET }}
+          region: ${{ secrets.COS_REGION }}
