@@ -20,7 +20,7 @@ date: 2020-10-05
 * 代码最后一个step根据自己的实际情况设置；
 * coscmd config config 配置请使用$ { {  } },配置参数，去掉花括号内空格；
 
-```python
+```
 name: sync cos
 on: 
   push:
