@@ -2,9 +2,6 @@ name: hotboard
 on:
   schedule:
     - cron:  '*/1 * * * *'
-  push:
-    branches: 
-    - main
 
 jobs:
   sync:
