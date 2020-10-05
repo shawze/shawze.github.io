@@ -9,6 +9,7 @@ jobs:
     steps:
     - name: install coscmd
       run: |
+        pip3 install setuptools
         pip3 install coscmd
     - name: config coscmd
       run: | 
