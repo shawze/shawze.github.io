@@ -45,17 +45,17 @@ input: GFM                            # use Github Flavored Markdown !important
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: ***
+disqus_username: xiaoze
 
 # Gitalk
-gitalk:
-  enable: true   #是否开启Gitalk评论
-  clientID: 'adfc34d3455988e8ba55'    #生成的clientID
-  clientSecret: '50eb5098be9dcc576b561329ff86897841daf255'   #同上
-  repo: shawze.github.io    #仓库名称
-  owner: shawze    #github用户名
-  admin: shawze
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+# gitalk:
+#   enable: true   #是否开启Gitalk评论
+#   clientID: 'adfc34d3455988e8ba55'    #生成的clientID
+#   clientSecret: '50eb5098be9dcc576b561329ff86897841daf255'   #同上
+#   repo: shawze.github.io    #仓库名称
+#   owner: shawze    #github用户名
+#   admin: shawze
+#   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 # Analytics settings
 # Baidu Analytics
