@@ -10,7 +10,10 @@ jobs:
     - name: install coscmd
       run: |
         pip3 install setuptools
-        pip3 install coscmd
+        cd /tmp
+        git clone https://github.com/tencentyun/coscmd.git
+        cd coscmd
+        python3 setup.py install
     - name: config coscmd
       run: | 
         coscmd config -a ${{ secrets.SECRETID }} -s ${{ secrets.SECRETKEY }} -b ${{ secrets.COS_BUCKET }} -r ${{ secrets.COS_REGION }}
