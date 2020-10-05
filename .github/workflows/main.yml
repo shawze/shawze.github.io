@@ -20,7 +20,8 @@ jobs:
     - name: Sync COS
       run: |
         cd /tmp
-        git clone https://github.com/shawze/shawze.github.io.git
+        sudo git clone https://github.com/shawze/shawze.github.io.git
         cd shawze.github.io
+        ls
         coscmd -r / /
         
