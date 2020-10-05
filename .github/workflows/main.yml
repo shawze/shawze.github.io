@@ -10,6 +10,7 @@ jobs:
     - name: install coscmd
       run: |
         sudo su
+        pip3 install setuptools
         git clone https://github.com/tencentyun/coscmd.git
         cd coscmd
         python3 setup.py install
