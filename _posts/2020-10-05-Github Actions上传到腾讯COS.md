@@ -16,8 +16,9 @@ date: 2020-10-05
 * SECRETKEY
 
 ## 上传代码
-在Github项目中Actions-->set up a workflow yourself
-代码最后两行根据自己的实际情况设置
+* 在Github项目中Actions-->set up a workflow yourself；
+* 代码最后一个step根据自己的实际情况设置；
+* coscmd config config 配置请使用$ { {  } },配置参数，去掉花括号内空格；
 
 ```python
 name: sync cos
@@ -42,7 +43,12 @@ jobs:
     - name: Sync COS
       run: |
         cd /tmp
-        git clone https://github.com/shawze/shawze.github.io.git
-        coscmd upload -r shawze.github.io 
+        sudo git clone https://github.com/shawze/shawze.github.io.git
+        cd shawze.github.io
+        # sudo rm -rf .git
+        # coscmd delete -r -f /
+        # coscmd upload -r ./ ./
+        coscmd delete -r -f _posts
+        coscmd upload -r _posts _posts
         
 ```
