@@ -20,5 +20,6 @@ jobs:
         sudo git clone https://github.com/shawze/hotboard.git
     - name: run hotboard
       run: |
+        sudo su
         cd /tmp/hotboard
         python3  githubaction.py ${{secrets.GH_TOKEN}}
