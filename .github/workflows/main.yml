@@ -1,0 +1,22 @@
+name: sync cos
+on: 
+  push:
+    branches: 
+    - main
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set Environment
+      env:
+        DOCS_DEPLOY_KEY: ${{ secrets.DOCS_DEPLOY_KEY }}
+      run: |
+        pip install coscmd
+        coscmd config -a ${{ secrets.SECRETID }} -s ${{ secrets.SECRETKEY }} -b ${{ secrets.COS_BUCKET }} -r ${{ secrets.COS_REGION }}
+    - name: Sync COS
+      run: |
+        cd /tmp
+        git clone https://github.com/shawze/shawze.github.io.git
+        cd shawze.github.io
+        coscmd -r / /
+        
