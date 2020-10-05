@@ -7,11 +7,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-    - name: Set Environment
-      env:
-        DOCS_DEPLOY_KEY: ${{ secrets.DOCS_DEPLOY_KEY }}
+    - name: install coscmd
       run: |
         pip install coscmd
+    - name: config coscmd
+      run: |
         coscmd config -a ${{ secrets.SECRETID }} -s ${{ secrets.SECRETKEY }} -b ${{ secrets.COS_BUCKET }} -r ${{ secrets.COS_REGION }}
     - name: Sync COS
       run: |
