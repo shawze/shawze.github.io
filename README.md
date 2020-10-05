@@ -261,7 +261,7 @@ JavaScript 的压缩混淆、Less 的编译、Apache 2.0 许可通告的添加�
 * 感谢 Jekyll、Github Pages 和 Bootstrap!
 
 ## 致谢
-* 这个模板基于qiubaiying、Huxpro(https://github.com/Huxpro/huxpro.github.io)修改
+* 这个模板基于qiubaiying、Huxpro( https://github.com/Huxpro/huxpro.github.io )修改
 
 
 
