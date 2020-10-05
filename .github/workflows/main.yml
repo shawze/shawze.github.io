@@ -10,11 +10,11 @@ jobs:
     - name: install coscmd
       run: |
         sudo su
-        pip install coscmd
+        git clone https://github.com/tencentyun/coscmd.git
+        cd coscmd
+        python3 setup.py install
     - name: config coscmd
-      run: |
-        cd /usr/local/bin/
-        ls  
+      run: | 
         coscmd config -a ${{ secrets.SECRETID }} -s ${{ secrets.SECRETKEY }} -b ${{ secrets.COS_BUCKET }} -r ${{ secrets.COS_REGION }}
     - name: Sync COS
       run: |
