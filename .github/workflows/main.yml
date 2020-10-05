@@ -9,6 +9,7 @@ jobs:
     steps:
     - name: install coscmd
       run: |
+        sudo su
         pip install coscmd
         sudo ln -s `pwd`/coscmd /usr/local/bin/coscmd
     - name: config coscmd
