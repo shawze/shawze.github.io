@@ -13,8 +13,8 @@ jobs:
         pip install coscmd
     - name: config coscmd
       run: |
-        cd /tmp
-        sudo ln -s  /usr/local/bin/coscmd coscmd
+        cd /usr/local/bin/
+        ls  
         coscmd config -a ${{ secrets.SECRETID }} -s ${{ secrets.SECRETKEY }} -b ${{ secrets.COS_BUCKET }} -r ${{ secrets.COS_REGION }}
     - name: Sync COS
       run: |
