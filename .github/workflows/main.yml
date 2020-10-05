@@ -23,5 +23,5 @@ jobs:
         sudo git clone https://github.com/shawze/shawze.github.io.git
         cd shawze.github.io
         ls
-        coscmd -r / /
+        coscmd upload -r / /
         
