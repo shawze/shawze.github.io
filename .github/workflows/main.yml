@@ -21,8 +21,9 @@ jobs:
       run: |
         cd /tmp
         sudo git clone https://github.com/shawze/shawze.github.io.git
-        #coscmd upload -r shawze.github.io b
         cd shawze.github.io
-        sudo rm -rf .git
-        coscmd upload -r ./ ./
+        # sudo rm -rf .git
+        # coscmd delete -r /
+        # coscmd upload -r ./ ./
+        coscmd upload -r _posts _posts
         
