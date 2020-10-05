@@ -17,6 +17,8 @@ date: 2020-10-05
 
 ## 上传代码
 在Github项目中Actions-->set up a workflow yourself
+代码最后两行根据自己的实际情况设置
+
 ```python
 name: sync cos
 on: 
@@ -40,9 +42,7 @@ jobs:
     - name: Sync COS
       run: |
         cd /tmp
-        #根据自己的项目设置
         git clone https://github.com/shawze/shawze.github.io.git
-        / #根据自己的项目设置
         coscmd upload -r shawze.github.io 
         
 ```
