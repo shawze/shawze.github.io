@@ -1,7 +1,7 @@
 ---
-layout:posts
-title:Github Actions上传到腾讯COS
-date:2020-10-05
+layout: post
+title:  Github Actions上传到腾讯COS
+date: 2020-10-05
 ---
 
 背景及用处：使用github pages创建自己的网站，但github速度过慢，同步腾讯cos设置静态托管加速访问；
@@ -40,6 +40,9 @@ jobs:
     - name: Sync COS
       run: |
         cd /tmp
-        git clone https://github.com/shawze/shawze.github.io.git  #根据自己的项目设置
-        coscmd upload -r shawze.github.io / #根据自己的项目设置
+        #根据自己的项目设置
+        git clone https://github.com/shawze/shawze.github.io.git
+        / #根据自己的项目设置
+        coscmd upload -r shawze.github.io 
+        
 ```
