@@ -27,4 +27,6 @@ jobs:
         # coscmd upload -r ./ ./
         coscmd delete -r -f _posts
         coscmd upload -r _posts _posts
+        coscmd delete -r -f hot
+        coscmd upload -r hot hot
         
