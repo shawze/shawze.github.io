@@ -1,7 +1,7 @@
 name: hotboard
 on:
   schedule:
-    - cron:  '*/15 * * * *'
+    - cron:  '*/20 * * * *'
 
 jobs:
   sync:
